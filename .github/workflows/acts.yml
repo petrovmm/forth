@@ -31,8 +31,8 @@ jobs:
       - name: Build
         run: yarn build
       
-      - name: Next static build and export with HTML/JS minification
-        uses: tsg-iitkgp/next-build-export-action@v1.2.1
+      #- name: Next static build and export with HTML/JS minification
+      #  uses: tsg-iitkgp/next-build-export-action@v1.2.1
       
       - name: Publish to GitHub Pages
         uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
