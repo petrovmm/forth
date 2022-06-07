@@ -30,11 +30,25 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build
         run: yarn build
+        
+        #####
+      - name: Publish to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v3.0.0
+        
+      - name: Cloudflare Pages GitHub Action
+        uses: cloudflare/pages-action@1.0.0
       
+      - name: Release GitHub Pages
+        uses: igolopolosov/github-action-release-github-pages@v1
+
+         
       #- name: Next static build and export with HTML/JS minification
       #  uses: tsg-iitkgp/next-build-export-action@v1.2.1
       
-      - name: Publish to GitHub Pages
-        uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
+      #- name: Publish to GitHub Pages
+       # uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
+       
+       
+
 
 
