@@ -21,7 +21,7 @@ jobs:
           npm install
           npm run build
       
-      - name: Build html #next ssr
+      - name: Build html 
         run: |
           make html
           rm -r build/html/_sources 
