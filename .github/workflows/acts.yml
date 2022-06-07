@@ -21,10 +21,10 @@ jobs:
           npm install
           npm run build
       
-      - name: Build html 
-        run: |
-          make html
-          rm -r build/html/_sources 
+      #- name: Build html 
+       # run: |
+        #  make html
+         # rm -r build/html/_sources 
       
       - name: Next static build and export with HTML/JS minification
         uses: tsg-iitkgp/next-build-export-action@v1.2.1
