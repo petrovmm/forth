@@ -1,8 +1,16 @@
 name: Publish on GitHub Pages
 
 on:
+  pull_request_target:
+          types:
+            - opened
+          branches:    
+            - 'releases/**'
+          paths:
+            - '**.js'
   push:
     branches: [ main ]
+    
 
 jobs:
   build:
@@ -37,6 +45,8 @@ jobs:
         
       - name: Cloudflare Pages GitHub Action
         uses: cloudflare/pages-action@1.0.0
+ 
+          
       
      # - name: Release GitHub Pages
      #   uses: igolopolosov/github-action-release-github-pages@v1
